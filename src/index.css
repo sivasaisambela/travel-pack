@@ -86,14 +86,49 @@ input {
   align-items: flex-start;
 }
 
-.list ul {
-  list-style: none;
+.list-inner {
   width: 85%;
   max-width: 120rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.list ul {
+  list-style: none;
+  width: 100%;
 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
   gap: 1.6rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end; /* use flex-start to put them on the left */
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.actions select,
+.actions button {
+  padding: 1rem 2.4rem;
+  font-size: 1.6rem;
+}
+
+.actions button {
+  background-color: #e5771f;
+  color: #ffebb3;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  transition:
+    transform 0.15s,
+    background-color 0.15s;
+}
+
+.actions button:hover {
+  background-color: #ff8a2b;
+  transform: translateY(-2px);
 }
 
 .list li {
